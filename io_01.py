@@ -8,3 +8,7 @@
 #         print(line, end="")
 #
 # summary.close()
+
+with open("set_summary.txt", "r") as source:
+    for line in source:                     # with method close object automaticly
+        print(line, end='')                 # once it's not needed
