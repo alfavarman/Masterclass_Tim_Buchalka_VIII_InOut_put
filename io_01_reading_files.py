@@ -22,9 +22,15 @@
 #         line = source.readline()
 
 
+# with open("set_summary.txt", "r") as source:
+#     lines = source.readlines()                # read all the lines, as a list
+# print(lines, end='')                          # shows in each element \n which shows why
+#                                               # use end=''
+# for line in lines:
+#     print(line, end='')
+
 with open("set_summary.txt", "r") as source:
-    lines = source.readlines()                # read all the lines, as a list
-print(lines, end='')                          # shows in each element \n which shows why
-                                              # use end=''
+    lines = source.read()                       # `read` reads entire file
+print(lines, end='')                            # overloading memory
 for line in lines:
     print(line, end='')
