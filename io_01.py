@@ -9,6 +9,8 @@
 #
 # summary.close()
 
+# with also handle error on objects, and close object before error terminates program
 with open("set_summary.txt", "r") as source:
     for line in source:                     # with method close object automaticly
         print(line, end='')                 # once it's not needed
+
