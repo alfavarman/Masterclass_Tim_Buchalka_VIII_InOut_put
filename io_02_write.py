@@ -19,3 +19,7 @@ a, b, c = variable_for_objects
 print(a)
 print(b)
 print(c)
+
+# For Security Sake it is not resonable to use Eval!
+# as external file may be changed and include vunerable instructions,
+# which program will execute.
