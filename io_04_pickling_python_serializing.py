@@ -1,3 +1,5 @@
+import pickle
+
 pantry = {
     "chicken": 500,
     "lemon": 2,
@@ -62,3 +64,16 @@ recipes = {
         "spoon": 1,
     },
 }
+
+with open('binary_03', 'bw') as content_to_pickle:
+    pickle.dump(pantry, content_to_pickle)
+    pickle.dump(recipes, content_to_pickle)
+
+with open('binary_03', 'br') as unpickle_content:
+    pantry2 = pickle.load(unpickle_content)
+    recipes2 = pickle.load(unpickle_content)
+    print(pantry2)
+    print(recipes2)
+    with open('unpickled.txt', 'w') as pickles:
+        print(pantry2, file=pickles)
+        print(recipes2, file=pickles)
