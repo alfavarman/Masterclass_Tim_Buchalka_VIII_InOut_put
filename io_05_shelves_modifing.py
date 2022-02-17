@@ -17,3 +17,13 @@ with shelve.open('thai_dishes') as thai_menu:
 
     for dish in thai_menu:
         print(dish, thai_menu[dish])
+    print('=' * 60)
+
+    # below doesn't work: chilli dip is appended to the object in memory
+    # while for loop print object from shelve
+    thai_menu['khao_mu_krop'].append("chilli dip")
+    thai_menu['khao_kha_mu'].append("chilli dip")
+
+    print('=' * 60)
+    for dish in thai_menu:
+        print(dish, thai_menu[dish])
