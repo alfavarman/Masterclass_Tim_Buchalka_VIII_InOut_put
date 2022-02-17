@@ -27,6 +27,7 @@ with shelve.open('thai_dishes') as thai_menu:
 
     # SOLUTION 1: create temporary object. modify object.
     # assign object value back to the object in database.
+    # ADVANTAGE: work with object in memory - fast
     # temp_menu = thai_menu["khao_mu_krop"]
     # temp_menu.append("chilli dip")
     # thai_menu['khao_mu_krop'] = temp_menu
