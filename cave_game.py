@@ -8,20 +8,18 @@ import shelve
 # before that (modified to use shelves) will be in cave_initialise.py.
 
 with shelve.open('locations') as locations:
-
     with shelve.open('vocabulary') as vocabulary:
 
         loc = 1
         while True:
-            availableExits = ", ".join(exits[loc].keys())
-
-            print(locations[loc])
+            availableExits = ", ".join(locations[str(loc)]["exits"].keys())
+            print(locations[str(loc)]["desc"])
 
             if loc == 0:
                 break
             else:
-                allExits = exits[loc].copy()
-                allExits.update(namedExits[loc])
+                allExits = locations[str(loc)]["exits"].copy()
+                allExits.update(locations[str(loc)]["namedExits"])
 
             direction = input("Available exits are " + availableExits).upper()
             print()

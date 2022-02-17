@@ -44,6 +44,7 @@ vocabulary = {"QUIT": "Q",
 
 loc = 1
 exits = locations[loc]
+
 while True:
     availableExits = ", ".join(exits[loc].keys())
 
