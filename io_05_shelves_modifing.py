@@ -34,7 +34,7 @@ with shelve.open('thai_dishes', writeback=True) as thai_menu:
     # SOLUTION 2: writeback = True line 10
     # easier code, but havier memory usage
     # python save modification when close with statement
-    thai_menu['tom_yum_khug'] = ['coconut milk', 'tom yum spices', 'chilli', 'shrimps']
+    # thai_menu['tom_yum_khug'] = ['coconut milk', 'tom yum spices', 'chilli', 'shrimps']
 
     print('=' * 60)
     for dish in thai_menu:
