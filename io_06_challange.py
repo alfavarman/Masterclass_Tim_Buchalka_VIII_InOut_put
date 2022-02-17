@@ -43,6 +43,7 @@ vocabulary = {"QUIT": "Q",
               "FOREST": "5"}
 
 loc = 1
+exits = locations[loc]
 while True:
     availableExits = ", ".join(exits[loc].keys())
 
@@ -51,8 +52,8 @@ while True:
     if loc == 0:
         break
     else:
-        allExits = exits[loc].copy()
-        allExits.update(namedExits[loc])
+        allExits = locations[loc]["exits"].copy()
+        allExits.update(locations[loc]["namedExits"])
 
     direction = input("Available exits are " + availableExits).upper()
     print()
