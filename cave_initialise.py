@@ -2,8 +2,8 @@ import shelve
 # Do this by creating two programs. cave_initialise.py should create the two
 # shelves (locations and vocabulary) with the appropriate keys and values.
 
-with shelve.open('locations') as location:
-    location['0'] = {"desc": "You are sitting in front of a computer learning Python",
+with shelve.open('locations') as locations:
+    locations['0'] = {"desc": "You are sitting in front of a computer learning Python",
                     "exits": {},
                     "namedExits": {}}
     location['1'] = {"desc": "You are standing at the end of a road before a small brick building",
