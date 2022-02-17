@@ -15,14 +15,21 @@ with shelve.open('thai_dishes') as thai_menu:
     # thai_menu['khao_kluk_khapi'] = khao_kluk_khapi
     # thai_menu['khao_mu_krop'] = khao_mu_krop
 
+    print('=' * 60)
     for dish in thai_menu:
         print(dish, thai_menu[dish])
-    print('=' * 60)
+
 
     # below doesn't work: chilli dip is appended to the object in memory
     # while for loop print object from shelve
-    thai_menu['khao_mu_krop'].append("chilli dip")
-    thai_menu['khao_kha_mu'].append("chilli dip")
+    # thai_menu['khao_mu_krop'].append("chilli dip")
+    # thai_menu['khao_kha_mu'].append("chilli dip")
+
+    # SOLUTION 1: create temporary object. modify object.
+    # assign object value back to the object in database.
+    # temp_menu = thai_menu["khao_mu_krop"]
+    # temp_menu.append("chilli dip")
+    # thai_menu['khao_mu_krop'] = temp_menu
 
     print('=' * 60)
     for dish in thai_menu:
